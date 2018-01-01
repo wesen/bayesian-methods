@@ -11,6 +11,10 @@ from keras.models import Model, Sequential
 from tensorflow.python.framework import dtypes
 from tensorflow.python.framework import ops
 
+import GPyOpt
+
+GPyOpt.methods.BayesianOptimization
+
 
 class CelebA:
     def __init__(self, path, sess, train=True, batch_size=32, height=218, width=178, channels=3, threads=1,
