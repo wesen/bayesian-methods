@@ -200,6 +200,7 @@ class FacialComposit:
                    'domain': (-w, w)}
                   for i in range(self.latent_size)]
         initial_rating = -self.rating[:, None]
+
         optimizer = GPyOpt.methods.BayesianOptimization(f=self.evaluate, domain=bounds,
                                                         acquisition_type=acquisition_type,
                                                         acquisition_par=acquisition_par,
